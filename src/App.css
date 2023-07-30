@@ -1,38 +1,92 @@
+:root {
+  --border-radius: .4rem;
+  --opacity: 80%;
+  --transition: all 300ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: none;
+  list-style: none;
+  font-size: medium;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 600px;
+  height: 75vh;
+  background-color: #FF0060;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: .5rem;
+  border-radius: var(--border-radius);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #F6FA70;
+  margin-top: .4rem;
+}
+
+.inputButton {
+  width: 90%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+}
+
+.inputButton input {
+  width: 70%;
+  padding: .7rem;
+  outline: none;
+  border-radius: var(--border-radius);
+}
+
+.inputButton button {
+  width: 20%;
+  padding: .7rem;
+  cursor: pointer;
+  background-color: #0079FF;
   color: white;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
 
-.App-link {
-  color: #61dafb;
+.inputButton button:hover {
+  opacity: var(--opacity);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App ul {
+  width: 84%;
+}
+
+.App ul li {
+  background-color: #F6FA70;
+  margin-block: .5rem;
+  padding: .5rem;
+  position: relative;
+  color: black;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.App ul li button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10%;
+  cursor: pointer;
+  background-color: #00DFA2;
+  border-radius: var(--border-radius);
+}
+
+.App ul li button:hover {
+  opacity: var(--opacity);
 }
